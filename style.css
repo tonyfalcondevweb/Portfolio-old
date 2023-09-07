@@ -6,59 +6,10 @@ faedcd
 d4a373
 */
 
-html{
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-    height: 120vh;
-}
-
-body{
-    margin: 0
-}
 
 
 
 /* Début Navbar */
-header{
-    background-color: antiquewhite;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.3);
-    transition: 0.3s  ease-in;
-    font-size: large;
-} 
-
-.sticky{
-    box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: 0.5s  ease-in;
-}
-
-.navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-
-
-.name{
-    align-self: center;
-    margin: 0 0.5em;
-}
-
-.menu{
-    display: flex;
-    list-style: none;
-}
-
-.menu > * {
-    margin: 0 2em;
-}
-
-.menu > * > * {
-    text-decoration: none;
-}
 /* Fin Navbar */
 
 
@@ -66,18 +17,5 @@ header{
 
 
 /* Debut Presentation */
-.presentation{
-    height: 50em;
-    background-color: aquamarine;
-    padding: 5em 0em;
-}
 
-.row{
-    display: flex;
-    flex-direction: row;
-}
-
-.photo{
-    width: 400px;
-}
 /* Fin Presentation */
