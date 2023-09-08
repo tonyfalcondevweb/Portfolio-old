@@ -1,63 +1,205 @@
-/* 
-ccd5ae
-e9edc9
-fefae0
-faedcd
-d4a373
-*/
+@font-face {
+    font-family: Chillax;
+    src: url(fonts/Chillax_Complete/Fonts/OTF/Chillax-Regular.otf);
+}
+
+@font-face {
+    font-family: ChillaxM;
+    src: url(fonts/Chillax_Complete/Fonts/OTF/Chillax-Medium.otf);
+}
+
+@font-face {
+    font-family: ChillaxS;
+    src: url(fonts/Chillax_Complete/Fonts/OTF/Chillax-Semibold.otf);
+}
 
 body {
     margin: 0px;
     background-color: #DDD0C8;
+    height: 120vh;
 }
 
 
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    overflow: visible;
+}
 
 /* Début Navbar */
 .navbar {
+    overflow: visible;
+    margin: 0 3rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 120rem;
-    height: 5rem;
-    padding-right: 0px;
-    gap: 8.5rem;
-    flex-shrink: 0;
-    font-family: 'Inter', sans-serif;
+    justify-content: space-between;
+    height: 4rem;
 }
 
 .container-name {
+    padding-right: 3rem;
     display: flex;
     align-items: center;
-    height: 5rem;
-    font-weight: 600;
+    height: 4rem;
 }
 
-.name{
+.name {
+    width: max-content;
+    font-family: "ChillaxS";
+    font-size: 30px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
+    color: #2c2010;
 }
 
 .container-menu {
+    padding: 0;
+    width: max-content;
     display: flex;
     align-items: center;
-    height: 5rem;
-    gap: 9.375rem;
+    justify-content: center;
+    gap: 7rem;
+    height: 4rem;
     list-style: none;
 }
 
 .btn-link {
+    font-family: "ChillaxM";
+    font-size: 25px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 20px;
-    color: #EC0058;
+    color: #2c2010;
 }
 
 /* Fin Navbar */
 
+/* Début Navbar Active */
+.nav-scroll {
+    animation: scroll 0.8s ease-in-out forwards;
+}
+
+@keyframes scroll {
+
+    0%{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    25%{
+        opacity: 0.7;
+    }
+
+    50%{
+        opacity: 0;
+        transform: scaleX(0.2);
+    }
+
+    75%{
+        opacity: 0.7;
+
+    }
+
+    100%{
+        transform: scaleX(1);
+        opacity: 1;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+}
+
+.name-scroll{
+    animation: disable 0.45s forwards;
+}
+
+@keyframes disable {
+    0% {
+        display: flex;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.menu-scroll{
+    animation: bg-color 0.8s ease-in forwards;
+}
+
+@keyframes bg-color {
+    50%{
+        background-color: none;
+    }
+
+    90%{
+        gap: 0.5rem;
+        background-color: none;
+    }
+
+    100% {
+        width: 37rem;
+        border-radius: 50px;
+        gap: 2rem;
+        background-color: #ECEFF0;
+    }
+}
 
 
+
+
+.nav-reset {
+    animation: scroll-reset 0.6s ease-out;
+}
+
+@keyframes scroll-reset {
+    0% {
+        margin-top: 1rem;
+        transform: scalex(0.2);
+        gap: 8rem;
+        background-color: #ECEFF0;
+    }
+
+    25% {
+        background-color: #ECEFF0;
+        transform: scalex(0.15);
+    }
+
+    50%{
+        background-color: none;
+    }
+
+    100% {
+        transform: scalex(1);
+    }
+}
+
+
+.name-reset {
+    animation: name-r 8s ease-in-out forwards;
+}
+
+@keyframes name-r {
+    0% {
+        display: none;
+    }
+
+    75% {
+        display: flex;
+    }
+}
+/* Fin Navbar Active */
+
+
+
+.test{
+    margin-top: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Debut Presentation */
