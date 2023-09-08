@@ -6,10 +6,54 @@ faedcd
 d4a373
 */
 
+body {
+    margin: 0px;
+    background-color: #DDD0C8;
+}
 
 
 
 /* Début Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120rem;
+    height: 5rem;
+    padding-right: 0px;
+    gap: 8.5rem;
+    flex-shrink: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-name {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    font-weight: 600;
+}
+
+.name{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    gap: 9.375rem;
+    list-style: none;
+}
+
+.btn-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #EC0058;
+}
+
 /* Fin Navbar */
 
 
