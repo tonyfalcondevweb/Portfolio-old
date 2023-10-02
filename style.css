@@ -1,3 +1,12 @@
+:root {
+    --zero: #EDE6E1;
+    --un: #9F9179;
+    --deux: #BE886E;
+    --trois: #827767;
+    --quatre: #504741;
+  }
+
+
 @font-face {
     font-family: Chillax;
     src: url(fonts/Chillax_Complete/Fonts/OTF/Chillax-Regular.otf);
@@ -15,7 +24,8 @@
 
 body {
     margin: 0px;
-    background-color: #DDD0C8;
+    background-color: var(--quatre);
+    color: var(--zero);
     height: 120vh;
 }
 
@@ -54,7 +64,7 @@ header {
     font-family: "ChillaxS";
     font-size: 30px;
     text-decoration: none;
-    color: #2c2010;
+    color: var(--zero);
 }
 
 .container-menu {
@@ -68,21 +78,21 @@ header {
     list-style: none;
 }
 
-.btn-link {
+.btn-link-nav {
     font-family: "ChillaxM";
     font-size: 25px;
     text-decoration: none;
-    color: #2c2010;
+    color: var(--zero);
 }
 
 /* Fin Navbar */
 
 /* Début Navbar Active */
 .nav-scroll {
-    animation: scroll 0.8s ease-in-out forwards;
+    animation: nav-base-scroll 0.3s ease-in-out forwards;
 }
 
-@keyframes scroll {
+@keyframes nav-base-scroll {
 
     0% {
         opacity: 1;
@@ -111,10 +121,10 @@ header {
 }
 
 .name-scroll {
-    animation: disable 0.45s forwards;
+    animation: nom-disable 0.15s forwards;
 }
 
-@keyframes disable {
+@keyframes nom-disable {
     0% {
         display: flex;
     }
@@ -125,36 +135,43 @@ header {
 }
 
 .menu-scroll {
-    animation: bg-color 0.8s ease-in forwards;
+    animation: menu-active 0.3s ease-in forwards;
 }
 
-@keyframes bg-color {
+@keyframes menu-active {
     50% {
         background-color: none;
     }
 
     90% {
         gap: 1rem;
-        background-color: #ECEFF0;
+        background-color: var(--trois);
     }
 
     100% {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: #ECEFF0;
+        background-color: var(--trois);
     }
 }
-
 /* Fin Navbar Active */
+
+
+
+
+
+
+
+
 
 
 /* Début Navbar Reset */
 .nav-reset {
-    animation: scale-out-horizontal 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: nav-base-reset 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-@keyframes scale-out-horizontal {
+@keyframes nav-base-reset {
     0% {
         margin-top: 1rem;
         justify-content: center;
@@ -175,15 +192,15 @@ header {
 }
 
 .menu-reset {
-    animation: bg-color-r 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
+    animation: menu-reset 0.15s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
 }
 
-@keyframes bg-color-r {
+@keyframes menu-reset {
     0% {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: #ECEFF0;
+        background-color: var(--trois);
     }
 
     30% {
@@ -191,7 +208,7 @@ header {
     }
 
     90%{
-        background-color: #ECEFF0;
+        background-color: var(--trois);
     }
 
     100% {
@@ -201,10 +218,10 @@ header {
 
 
 .name-reset {
-    animation: name-r 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: nav-name-reset 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-@keyframes name-r {
+@keyframes nav-name-reset {
     0% {
         display: none;
     }
@@ -226,14 +243,33 @@ header {
 
 
 
-.test {
-    margin-top: 25rem;
-    width: 100%;
+
+/* Debut Presentation */
+.presentation {
+    margin-top: 15rem;
+    padding-left: 10rem;
+    display: flex;
+    height: 40rem;
+    justify-content: center;
+    gap: 2rem;
+    /* background-color: var(--zero); */
+}
+
+.container-photo{
+    width: 15rem;
     display: flex;
     justify-content: center;
 }
 
+.photo{
+    width: 200px;
+    border-radius: 20px;
+    height: fit-content;
+}
 
-/* Debut Presentation */
-
+.text{
+    width: 40rem;
+    padding: 5rem;
+    font-family: ChillaxM;
+}
 /* Fin Presentation */
