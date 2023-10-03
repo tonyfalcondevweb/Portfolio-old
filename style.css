@@ -1,12 +1,7 @@
-:root {
-    --zero: #EDE6E1;
-    --un: #9F9179;
-    --deux: #BE886E;
-    --trois: #827767;
-    --quatre: #504741;
-  }
 
 
+
+/* Fonts */
 @font-face {
     font-family: Chillax;
     src: url(fonts/Chillax_Complete/Fonts/OTF/Chillax-Regular.otf);
@@ -22,17 +17,73 @@
     src: url(fonts/Chillax_Complete/Fonts/OTF/Chillax-Semibold.otf);
 }
 
-body {
-    margin: 0px;
-    background-color: var(--quatre);
-    color: var(--zero);
-    height: 120vh;
+@font-face {
+    font-family: Bosch;
+    src: url(fonts/Bosch-Display-Font/OTF-File/Bosch.otf);
 }
 
+/* Fonts */
 
 
 
 
+
+
+
+
+
+
+/* base CSS */
+body {
+    margin: 0px;
+    background-color: #33312c;
+    height: 120vh;
+    scroll-margin-block: 10px;
+    scroll-margin-block: 1em 0.5em;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+/* base CSS */
+
+
+
+
+
+
+
+
+
+
+
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rosybrown;
+    border-radius: 10px;
+}
+
+/* scrollbar */
+
+
+
+
+/* Début Navbar */
 header {
     position: fixed;
     top: 0;
@@ -42,29 +93,12 @@ header {
     overflow: visible;
 }
 
-/* Début Navbar */
 .navbar {
     overflow: visible;
-    margin: 0 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 4rem;
-}
-
-.container-name {
-    padding-right: 3rem;
-    display: flex;
-    align-items: center;
-    height: 4rem;
-}
-
-.name {
-    width: max-content;
-    font-family: "ChillaxS";
-    font-size: 30px;
-    text-decoration: none;
-    color: var(--zero);
 }
 
 .container-menu {
@@ -73,7 +107,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7rem;
+    gap: 4rem;
     height: 4rem;
     list-style: none;
 }
@@ -82,77 +116,54 @@ header {
     font-family: "ChillaxM";
     font-size: 25px;
     text-decoration: none;
-    color: var(--zero);
+    color: #FFFDFA;
 }
-
 /* Fin Navbar */
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* Début Navbar Active */
-.nav-scroll {
-    animation: nav-base-scroll 0.3s ease-in-out forwards;
-}
-
-@keyframes nav-base-scroll {
-
-    0% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-
-    25% {
-        opacity: 0.7;
-    }
-
-    50% {
-        opacity: 0;
-        transform: scaleX(0.3);
-    }
-
-    75% {
-        opacity: 0.7;
-    }
-
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-        margin-top: 1rem;
-        justify-content: center;
-    }
-}
-
-.name-scroll {
-    animation: nom-disable 0.15s forwards;
-}
-
-@keyframes nom-disable {
-    0% {
-        display: flex;
-    }
-
-    100% {
-        display: none;
-    }
-}
-
 .menu-scroll {
-    animation: menu-active 0.3s ease-in forwards;
+    animation: menu-active 0.3s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 @keyframes menu-active {
+    0% {
+        gap: 4rem;
+        background-color: transparent;
+    }
+
     50% {
-        background-color: none;
+        gap: 4rem;
+        background-color: transparent;
     }
 
     90% {
-        gap: 1rem;
-        background-color: var(--trois);
+        margin-top: 3rem;
+        border-radius: 50px;
+        background-color: rosybrown;
     }
 
     100% {
+        margin-top: 3rem;
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: var(--trois);
+        background-color: rosybrown;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
 /* Fin Navbar Active */
@@ -162,114 +173,90 @@ header {
 
 
 
-
-
-
-
 /* Début Navbar Reset */
-.nav-reset {
-    animation: nav-base-reset 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@keyframes nav-base-reset {
-    0% {
-        margin-top: 1rem;
-        justify-content: center;
-    }
-    49%{
-        justify-content: center;
-    }
-    50% {
-        transform: scaleX(0.3);
-        opacity: 0;
-        justify-content: space-between;
-    }
-
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
 .menu-reset {
-    animation: menu-reset 0.15s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
+    animation: menu-reset 0.3s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
 }
+
 
 @keyframes menu-reset {
     0% {
+        margin-top: 3rem;
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: var(--trois);
+        background-color: rosybrown;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    30% {
-        gap: 1rem;
+    50% {
+        margin-top: 3rem;
+        border-radius: 50px;
+        background-color: transparent;
+
     }
 
-    90%{
-        background-color: var(--trois);
-    }
-
-    100% {
-        background-color: none;
-    }
-}
-
-
-.name-reset {
-    animation: nav-name-reset 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@keyframes nav-name-reset {
-    0% {
-        display: none;
-    }
-
-    59% {
-        display: none;
-    }
-
-    60% {
-        display: flex;
+    90% {
+        gap: 4rem;
+        background-color: transparent;
     }
 
     100% {
-        display: flex;
+
+        gap: 4rem;
+        background-color: transparent;
     }
 }
-
 /* Fin Navbar Reset */
+
+
+
+
+
+
+
+/* Début Home */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: bosch;
+    color: white;
+}
+
+.title-home {
+    font-size: 80px;
+    letter-spacing: 6px;
+}
+
+/* Fin Home */
+
 
 
 
 
 /* Debut Presentation */
 .presentation {
-    margin-top: 15rem;
-    padding-left: 10rem;
-    display: flex;
-    height: 40rem;
-    justify-content: center;
-    gap: 2rem;
-    /* background-color: var(--zero); */
-}
-
-.container-photo{
-    width: 15rem;
+    color: whitesmoke;
+    background-color: #b9b09a;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 13rem;
 }
 
-.photo{
-    width: 200px;
+.photo {
+    width: 300px;
     border-radius: 20px;
-    height: fit-content;
 }
 
-.text{
+.text {
+    height: fit-content;
     width: 40rem;
-    padding: 5rem;
+    font-size: 1.6rem;
     font-family: ChillaxM;
 }
 /* Fin Presentation */
