@@ -21,7 +21,6 @@
     font-family: Bosch;
     src: url(fonts/Bosch-Display-Font/OTF-File/Bosch.otf);
 }
-
 /* Fonts */
 
 
@@ -37,7 +36,6 @@
 body {
     margin: 0px;
     background-color: #33312c;
-    height: 120vh;
     scroll-margin-block: 10px;
     scroll-margin-block: 1em 0.5em;
 }
@@ -63,7 +61,7 @@ body {
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {
-    width: 17px;
+    width: 10px;
 }
 
 /* Track */
@@ -74,10 +72,9 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rosybrown;
+    background: #b9b09a;
     border-radius: 10px;
 }
-
 /* scrollbar */
 
 
@@ -154,7 +151,7 @@ header {
     90% {
         margin-top: 3rem;
         border-radius: 50px;
-        background-color: rosybrown;
+        background-color: #b9b09a;
     }
 
     100% {
@@ -162,7 +159,7 @@ header {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: rosybrown;
+        background-color: #b9b09a;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
@@ -188,7 +185,7 @@ header {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: rosybrown;
+        background-color: #b9b09a;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
@@ -220,18 +217,23 @@ header {
 
 /* Début Home */
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: bosch;
+    flex-direction: column;
     color: white;
+    text-align: center;
 }
 
 .title-home {
+    margin: 0;
     font-size: 80px;
     letter-spacing: 6px;
+    font-family: bosch;
 }
 
+.home-text{
+    margin: 2rem;
+    font-size: 50px;
+    color: #b9b09a;
+}
 /* Fin Home */
 
 
@@ -241,22 +243,49 @@ header {
 /* Debut Presentation */
 .presentation {
     color: whitesmoke;
-    background-color: #b9b09a;
+    background-color: #928873;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 13rem;
+    overflow: hidden;
 }
 
+/* Photo + animation*/
 .photo {
     width: 300px;
     border-radius: 20px;
 }
 
+.slide-right-hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+}
+
+.slide-right-show{
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Photo + animation*/
+
+/* Text + animation*/
 .text {
     height: fit-content;
     width: 40rem;
     font-size: 1.6rem;
     font-family: ChillaxM;
 }
+
+.slide-left-hidden{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease-out;
+}
+
+.slide-left-show{
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Text + animation*/
 /* Fin Presentation */
