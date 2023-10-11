@@ -87,11 +87,10 @@ header {
     left: 0;
     margin: auto;
     width: 100%;
-    overflow: visible;
+    z-index: 1;
 }
 
 .navbar {
-    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,14 +223,14 @@ header {
 
 .title-home {
     margin: 0;
-    font-size: 80px;
-    letter-spacing: 6px;
+    font-size: 100px;
+    letter-spacing: 9px;
     font-family: bosch;
 }
 
 .home-text{
     margin: 2rem;
-    font-size: 50px;
+    font-size: 70px;
     color: #b9b09a;
 }
 /* Fin Home */
@@ -252,8 +251,13 @@ header {
 }
 
 /* Photo + animation*/
+.container-photo{
+    height: 500px;
+}
+
 .photo {
     width: 300px;
+    height: 530px;
     border-radius: 20px;
 }
 
@@ -271,10 +275,12 @@ header {
 
 /* Text + animation*/
 .text {
-    height: fit-content;
+    height: 530px;
     width: 40rem;
     font-size: 1.6rem;
     font-family: ChillaxM;
+    display: flex;
+    align-items: center;
 }
 
 .slide-left-hidden{
