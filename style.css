@@ -1,3 +1,45 @@
+/* base CSS */
+:root {
+    --nav-bg: #bea378;
+    --whitecolor: #f8f9fa;
+    --brown-bg: #33312c;
+    --brown-bg-light: #5f5948;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    scroll-margin-block: 10px;
+    scroll-margin-block: 1em 0.5em;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* base CSS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21,6 +63,7 @@
     font-family: Bosch;
     src: url(fonts/Bosch-Display-Font/OTF-File/Bosch.otf);
 }
+
 /* Fonts */
 
 
@@ -32,20 +75,6 @@
 
 
 
-/* base CSS */
-body {
-    margin: 0px;
-    background-color: #33312c;
-    scroll-margin-block: 10px;
-    scroll-margin-block: 1em 0.5em;
-}
-
-.container {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-}
-/* base CSS */
 
 
 
@@ -59,7 +88,7 @@ body {
 
 
 /* scrollbar */
-/* width */
+/* taille */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -70,11 +99,12 @@ body {
     border-radius: 10px;
 }
 
-/* Handle */
+/* barre */
 ::-webkit-scrollbar-thumb {
     background: #b9b09a;
     border-radius: 10px;
 }
+
 /* scrollbar */
 
 
@@ -112,8 +142,9 @@ header {
     font-family: "ChillaxM";
     font-size: 25px;
     text-decoration: none;
-    color: #FFFDFA;
+    color: var(--whitecolor);
 }
+
 /* Fin Navbar */
 
 
@@ -150,7 +181,7 @@ header {
     90% {
         margin-top: 3rem;
         border-radius: 50px;
-        background-color: #b9b09a;
+        background-color: var(--nav-bg);
     }
 
     100% {
@@ -158,10 +189,11 @@ header {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: #b9b09a;
+        background-color: var(--nav-bg);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
+
 /* Fin Navbar Active */
 
 
@@ -184,7 +216,7 @@ header {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: #b9b09a;
+        background-color: var(--nav-bg);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
@@ -206,6 +238,7 @@ header {
         background-color: transparent;
     }
 }
+
 /* Fin Navbar Reset */
 
 
@@ -217,8 +250,9 @@ header {
 /* Début Home */
 .home {
     flex-direction: column;
-    color: white;
+    color: var(--whitecolor);
     text-align: center;
+    background-color: var(--brown-bg);
 }
 
 .title-home {
@@ -228,11 +262,12 @@ header {
     font-family: bosch;
 }
 
-.home-text{
+.home-text {
     margin: 2rem;
     font-size: 70px;
-    color: #b9b09a;
+    color: var(--nav-bg);
 }
+
 /* Fin Home */
 
 
@@ -241,8 +276,8 @@ header {
 
 /* Debut Presentation */
 .presentation {
-    color: whitesmoke;
-    background-color: #928873;
+    color: var(--whitecolor);
+    background-color: var(--brown-bg-light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,8 +285,8 @@ header {
     overflow: hidden;
 }
 
-/* Photo + animation*/
-.container-photo{
+/* Photo*/
+.container-photo {
     height: 500px;
 }
 
@@ -260,20 +295,9 @@ header {
     height: 530px;
     border-radius: 20px;
 }
+/* Photo*/
 
-.slide-right-hidden{
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s ease-out;
-}
-
-.slide-right-show{
-    opacity: 1;
-    transform: translateX(0);
-}
-/* Photo + animation*/
-
-/* Text + animation*/
+/* Text*/
 .text {
     height: 530px;
     width: 40rem;
@@ -282,16 +306,86 @@ header {
     display: flex;
     align-items: center;
 }
+/* Text*/
+/* Fin Presentation */
 
-.slide-left-hidden{
+
+/* Debut Competences */
+.competences {
+    background-color: var(--brown-bg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg-competences{
+    display: flex;
+    align-items: center;
+    background-color: var(--brown-bg-light);
+    border-radius: 20px;
+}
+
+.bloc-competences {
+    display: flex;
+    width: 440px;
+    height: 700px;
+    background-color: var(--brown-bg-light);
+}
+
+.techno{
+    border-radius: 20px 0 0 20px;
+}
+
+.soft{
+    border-radius: 0 20px 20px 0;
+}
+
+.vertical{
+    border-left: 3px solid var(--brown-bg);
+    height: 400px;
+}
+/* Fin Competences */
+
+
+
+/* Animation */
+.slide-right-hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+}
+
+.slide-right-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+.slide-left-hidden {
     opacity: 0;
     transform: translateX(100%);
     transition: all 1s ease-out;
 }
 
-.slide-left-show{
+.slide-left-show {
     opacity: 1;
     transform: translateX(0);
 }
-/* Text + animation*/
-/* Fin Presentation */
+
+
+
+
+
+.slide-down-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s ease-out;
+}
+
+.slide-down-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Animation */
