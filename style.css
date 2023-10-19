@@ -1,6 +1,13 @@
 /* base CSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 :root {
-    --nav-bg: #bea378;
+    --beige-bg: #bea378;
+    --beige-bg-light: #F3D29E;
     --whitecolor: #f8f9fa;
     --brown-bg: #33312c;
     --brown-bg-light: #5f5948;
@@ -12,8 +19,11 @@ html {
 
 body {
     margin: 0px;
-    scroll-margin-block: 10px;
-    scroll-margin-block: 1em 0.5em;
+    font-family: ChillaxM;
+}
+
+h3 {
+    letter-spacing: 1.5px;
 }
 
 .container {
@@ -139,10 +149,10 @@ header {
 }
 
 .btn-link-nav {
-    font-family: "ChillaxM";
     font-size: 25px;
     text-decoration: none;
     color: var(--whitecolor);
+    letter-spacing: 1px;
 }
 
 /* Fin Navbar */
@@ -181,7 +191,7 @@ header {
     90% {
         margin-top: 3rem;
         border-radius: 50px;
-        background-color: var(--nav-bg);
+        background-color: var(--beige-bg);
     }
 
     100% {
@@ -189,7 +199,7 @@ header {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: var(--nav-bg);
+        background-color: var(--beige-bg);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
@@ -216,15 +226,18 @@ header {
         width: 37rem;
         border-radius: 50px;
         gap: 2rem;
-        background-color: var(--nav-bg);
+        background-color: var(--beige-bg);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    30% {
+        background-color: transparent;
     }
 
     50% {
         margin-top: 3rem;
         border-radius: 50px;
         background-color: transparent;
-
     }
 
     90% {
@@ -265,7 +278,7 @@ header {
 .home-text {
     margin: 2rem;
     font-size: 70px;
-    color: var(--nav-bg);
+    color: var(--beige-bg);
 }
 
 /* Fin Home */
@@ -295,6 +308,7 @@ header {
     height: 530px;
     border-radius: 20px;
 }
+
 /* Photo*/
 
 /* Text*/
@@ -302,10 +316,10 @@ header {
     height: 530px;
     width: 40rem;
     font-size: 1.6rem;
-    font-family: ChillaxM;
     display: flex;
     align-items: center;
 }
+
 /* Text*/
 /* Fin Presentation */
 
@@ -318,41 +332,168 @@ header {
     overflow: hidden;
 }
 
-.left-bloc{
+.left-container {
     display: flex;
 }
 
-.right-bloc{
+.right-container {
     display: flex;
 }
 
-.vertical{
-    border-top: 100px solid var(--brown-bg-light);
-    border-bottom: 100px solid var(--brown-bg-light);
-    width: 3px;
-    background-color: var(--brown-bg);
-}
-
-.bloc-competences {
-    margin-top: 5rem;
+.container-competences {
+    margin-top: 9rem;
     display: flex;
     width: 550px;
     height: 700px;
     background-color: var(--brown-bg-light);
 }
 
-.techno{
+.techno {
     border-radius: 20px 0 0 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0px 30px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
 }
 
-.hard{
+.bloc-techno {
+    display: flex;
+    width: 240px;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.bloc-techno>h3 {
+    margin: 0.5rem;
+    text-align: center;
+    width: 100%;
+    color: var(--beige-bg-light);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2); 
+}
+
+.bloc-techno>p {
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+.container-middle {
     display: flex;
     justify-content: space-between;
 }
 
-.soft{
-    border-radius: 0 20px 20px 0;
+.vertical {
+    border-top: 100px solid var(--brown-bg-light);
+    border-bottom: 100px solid var(--brown-bg-light);
+    width: 3px;
+    background-color: var(--brown-bg);
 }
+
+
+
+
+
+
+
+
+
+.container-hard {
+    display: flex;
+    width: 440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-shrink: 0;
+}
+
+.bloc-hard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.bloc-hard>h3 {
+    margin: 0.5rem;
+    text-align: center;
+    width: 100%;
+    color: var(--beige-bg-light);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.bloc-hard>p {
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    /* line-height: 23px; */
+}
+
+
+
+
+
+
+.soft {
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    width: 550px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-shrink: 0;
+}
+
+
+.container-soft {
+    display: flex;
+    width: 440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-shrink: 0;
+}
+
+.bloc-soft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.bloc-soft>h3 {
+    margin: 0.5rem;
+    text-align: center;
+    width: 100%;
+    color: var(--beige-bg-light);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.bloc-soft>p {
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 /* Fin Competences */
 
 
@@ -404,8 +545,8 @@ header {
 
 .scale-center-hidden {
     opacity: 0;
-	transform: scaleY(0);
-    transition: all 2.5s ease-out;
+    transform: scaleY(0);
+    transition: all 1.25s ease-out;
 }
 
 
@@ -420,23 +561,20 @@ header {
 
 
 .focus-in-expand {
-	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes focus-in-expand {
     0% {
-      letter-spacing: -0.5em;
-      filter: blur(12px);
-      opacity: 0;
+        letter-spacing: -0.5em;
+        filter: blur(12px);
+        opacity: 0;
     }
+
     100% {
-      filter: blur(0px);
-      opacity: 1;
+        filter: blur(0px);
+        opacity: 1;
     }
-  }
+}
+
 /* Animation */
-
-
-
-
-
