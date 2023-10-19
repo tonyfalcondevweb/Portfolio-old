@@ -15,13 +15,13 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("slide-right-show");
-            entry.target.classList.add("slide-left-show");
-            entry.target.classList.add("slide-down-show");
+            entry.target.classList.add("slide-left-show");     
+            entry.target.classList.add("scale-center-show");     
         }
         else{
             entry.target.classList.remove("slide-right-show");
             entry.target.classList.remove("slide-left-show");
-            entry.target.classList.remove("slide-down-show");
+            entry.target.classList.remove("scale-center-show");
         }
     });
 });
@@ -29,3 +29,10 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.animation');
 hiddenElements.forEach((el) => observer.observe(el));
 // animation slide
+
+
+
+
+
+
+

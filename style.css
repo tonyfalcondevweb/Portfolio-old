@@ -318,16 +318,25 @@ header {
     overflow: hidden;
 }
 
-.bg-competences{
+.left-bloc{
     display: flex;
-    align-items: center;
-    background-color: var(--brown-bg-light);
-    border-radius: 20px;
+}
+
+.right-bloc{
+    display: flex;
+}
+
+.vertical{
+    border-top: 100px solid var(--brown-bg-light);
+    border-bottom: 100px solid var(--brown-bg-light);
+    width: 3px;
+    background-color: var(--brown-bg);
 }
 
 .bloc-competences {
+    margin-top: 5rem;
     display: flex;
-    width: 440px;
+    width: 550px;
     height: 700px;
     background-color: var(--brown-bg-light);
 }
@@ -336,13 +345,13 @@ header {
     border-radius: 20px 0 0 20px;
 }
 
-.soft{
-    border-radius: 0 20px 20px 0;
+.hard{
+    display: flex;
+    justify-content: space-between;
 }
 
-.vertical{
-    border-left: 3px solid var(--brown-bg);
-    height: 400px;
+.soft{
+    border-radius: 0 20px 20px 0;
 }
 /* Fin Competences */
 
@@ -371,6 +380,7 @@ header {
 
 .slide-left-show {
     opacity: 1;
+    transition-delay: 0s;
     transform: translateX(0);
 }
 
@@ -388,4 +398,45 @@ header {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+
+.scale-center-hidden {
+    opacity: 0;
+	transform: scaleY(0);
+    transition: all 2.5s ease-out;
+}
+
+
+.scale-center-show {
+    opacity: 1;
+    transform: scaleY(100%);
+}
+
+
+
+
+
+
+.focus-in-expand {
+	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
 /* Animation */
+
+
+
+
+
