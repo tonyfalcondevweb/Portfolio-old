@@ -29,10 +29,3 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.animation');
 hiddenElements.forEach((el) => observer.observe(el));
 // animation slide
-
-
-
-
-
-
-
