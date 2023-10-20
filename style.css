@@ -561,7 +561,11 @@ header {
 
 
 .focus-in-expand {
-    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-name: focus-in-expand;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-delay: 0s;
+    animation-fill-mode: both;
 }
 
 @keyframes focus-in-expand {
