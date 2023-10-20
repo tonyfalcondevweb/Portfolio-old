@@ -564,7 +564,7 @@ header {
     animation-name: focus-in-expand;
     animation-duration: 0.8s;
     animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    animation-delay: 600ms;
+    animation-delay: 400ms;
     animation-fill-mode: both;
 }
 
